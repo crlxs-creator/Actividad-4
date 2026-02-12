@@ -24,3 +24,17 @@ exports.obtenerAlbums = async (req, res) => {
         res.status(500).json( { mensaje: error.message });
     }
 };
+
+//Obtener Album por ID
+exports.obtenerAlbumPorId = async (req, res) => {
+    try{
+        const album = await Album.findById(req.params.id);
+
+        if (!album) {
+            return res.status(404).json({ mensaje: "Album no encontrado" });
+        }
+        res.json(album);
+    }catch (error){
+        res.status(500).json({ mensaje: error.message });
+    }
+};
