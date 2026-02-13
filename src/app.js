@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
 app.use(express.json());
@@ -8,5 +9,8 @@ const authRoutes = require('./routes/authRoutes');
 
 app.use('/api/albums', albumRoutes);
 app.use('/api/auth', authRoutes);
+
+// Servir frontend
+app.use(express.static(path.join(__dirname, '../public')));
 
 module.exports = app;
