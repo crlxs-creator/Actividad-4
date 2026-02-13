@@ -1,23 +1,23 @@
 const mongoose = require('mongoose');
 
 const albumSchema = new mongoose.Schema({
-    titulo: {
+    tittle: {
         type: String, 
         required: true
     },
-    artista: {
+    artist: {
         type: String, 
         required: true
     },
-    genero: {
+    genre: {
         type: String, 
         required: true
     },
-    anio: {
+    year: {
         type: Number, 
         required: true
     },
-    precio: {
+    price: {
         type: Number,
         required: true
     },
@@ -25,6 +25,8 @@ const albumSchema = new mongoose.Schema({
         type: Number, 
         required: true
     }
-},  { timestamps: true });
+},  { 
+    timestamps: true 
+});
 
 module.exports = mongoose.model('Album', albumSchema);

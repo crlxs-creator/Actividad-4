@@ -4,6 +4,9 @@ const app = express();
 app.use(express.json());
 
 const albumRoutes = require('./routes/albumRoutes');
-app.use('/api/albums', albumRoutes);
+const authRoutes = require('./routes/authRoutes');
 
-module.exports = app; 
+app.use('/api/albums', albumRoutes);
+app.use('/api/auth', authRoutes);
+
+module.exports = app;
