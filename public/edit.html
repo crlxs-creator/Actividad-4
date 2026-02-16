@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Álbum</title>
+    <title>Editar Álbum</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <h2>Nuevo Álbum</h2>
+        <h2>Editar Álbum</h2>
 
-        <form id="createForm">
+        <form id="editForm">
             <input type="text" id="title" placeholder="Título" required>
             <input type="text" id="artist" placeholder="Artista" required>
             <input type="text" id="genre" placeholder="Género" required>
             <input type="number" id="year" placeholder="Año" required>
             <input type="number" id="price" placeholder="Precio" required>
-            <button type="submit">Crear</button>
+            <button type="submit">Actualizar</button>
         </form>
 
         <div class="text-center mt-3">
             <button onclick="volver()" class="btn-secondary">← Volver</button>
         </div>
-
-        <p id="mensaje"></p>
     </div>
 
-    <script src="js/create.js"></script>
+    <script src="js/edit.js"></script>
 </body>
 </html>

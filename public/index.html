@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Albums</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <h2>Lista de Albums</h2>
+            <div class="header-actions">
+                <button onclick="irACrear()">Crear Album</button>
+                <button id="logout" class="btn-secondary">Cerrar sesión</button>
+            </div>
+        </div>
 
-    <h2>Lista de Albums</h2>
-
-    <button onclick="irACrear()">Crear Álbum</button>
-    <button id="logout">Cerrar sesión</button>
-
-    <br><br>
-
-    <div id="albums"></div>
+        <div id="albums"></div>
+    </div>
 
     <script src="js/index.js"></script>
-
 </body>
 </html>

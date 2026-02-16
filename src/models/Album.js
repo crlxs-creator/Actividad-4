@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const albumSchema = new mongoose.Schema({
-    tittle: {
+    title: {
         type: String, 
         required: true
     },
@@ -23,7 +23,7 @@ const albumSchema = new mongoose.Schema({
     },
     stock: {
         type: Number, 
-        required: true
+        default: 0
     }
 },  { 
     timestamps: true 

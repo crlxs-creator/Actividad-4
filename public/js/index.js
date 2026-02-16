@@ -23,7 +23,7 @@ function editarAlbum(id) {
 
 // Eliminar
 async function eliminarAlbum(id) {
-    if (!confirm("¿Seguro que quieres eliminar este álbum?")) return;
+    if (!confirm("¿Seguro que quieres eliminar este album?")) return;
 
     try {
         const response = await fetch(`/api/albums/${id}`, {
@@ -60,18 +60,18 @@ async function cargarAlbums() {
 
         data.albums.forEach(album => {
             const div = document.createElement("div");
+            div.className = "album-card";
 
             div.innerHTML = `
                 <h3>${album.title}</h3>
-                <p>Artista: ${album.artist}</p>
-                <p>Genero: ${album.genre}</p>
-                <p>Año: ${album.year}</p>
-                <p>Precio: $${album.price}</p>
-
-                <button onclick="editarAlbum('${album._id}')">Editar</button>
-                <button onclick="eliminarAlbum('${album._id}')">Eliminar</button>
-
-                <hr>
+                <p><strong>Artista:</strong> ${album.artist}</p>
+                <p><strong>Género:</strong> ${album.genre}</p>
+                <p><strong>Año:</strong> ${album.year}</p>
+                <p class="price">$${album.price}</p>
+                <div class="actions">
+                    <button onclick="editarAlbum('${album._id}')">Editar</button>
+                    <button onclick="eliminarAlbum('${album._id}')" class="btn-danger">Eliminar</button>
+                </div>
             `;
 
             container.appendChild(div);

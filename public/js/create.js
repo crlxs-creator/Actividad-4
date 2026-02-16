@@ -25,10 +25,13 @@ form.addEventListener("submit", async (e) => {
             body: JSON.stringify({ title, artist, genre, year, price })
         });
 
+        const data = await response.json();
+        console.log(data);
+
         if (response.ok) {
             window.location.href = "index.html";
         } else {
-            document.getElementById("mensaje").innerText = "Error al crear álbum";
+            document.getElementById("mensaje").innerText = data.mensaje || "Error al crear álbum";
         }
 
     } catch (error) {

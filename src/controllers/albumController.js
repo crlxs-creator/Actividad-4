@@ -4,7 +4,7 @@ const Album = require('../models/Album');
 // Crear Album
 exports.crearAlbum = async (req, res) => {
     try {
-        if (!req.body.tittle || !req.body.artist) {
+        if (!req.body.title || !req.body.artist) {
             return res.status(400).json({ mensaje: "Faltan datos obligatorios" });
         }
 
