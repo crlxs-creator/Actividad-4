@@ -14,8 +14,8 @@ app.use('/api/auth', authRoutes);
 /* ========= STATIC FRONTEND ========= */
 app.use(express.static(path.join(__dirname, '../../frontend')));
 
-/* ========= CATCH ALL (EXPRESS 5) ========= */
-app.get('/:path(*)', (req, res) => {
+/* ========= CATCH ALL ========= */
+app.get('{*path}', (req, res) => {
   if (!req.originalUrl.startsWith('/api')) {
     res.sendFile(path.join(__dirname, '../../frontend/index.html'));
   } else {
