@@ -180,7 +180,7 @@ La aplicación es completamente responsive con breakpoints en:
 - **Tablet**: 481px - 768px
 - **Móvil**: < 480px
 
-## 🤝 Uso
+## Uso
 
 1. **Registro**: Crear una cuenta en `/register.html`
 2. **Login**: Iniciar sesión en `/login.html`
@@ -190,10 +190,4 @@ La aplicación es completamente responsive con breakpoints en:
 6. **Eliminar álbum**: Click en "Eliminar" (requiere confirmación)
 7. **Cerrar sesión**: Click en "Cerrar sesión" para salir
 
-## 📝 Licencia
 
-Este proyecto fue creado con fines educativos.
-
----
-
-Desarrollado con ❤️ usando Node.js, Express y MongoDB
